@@ -1,0 +1,76 @@
+[data-cgtc-toolbar] {
+  all: initial;
+  --cgtc-fg: #525252;
+  --cgtc-bg: #ffffff;
+  --cgtc-hover: #f3f4f4;
+  --cgtc-border: #dedede;
+  --cgtc-success: #087852;
+  --cgtc-error: #b42318;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 6px;
+  position: relative;
+  clear: both;
+  direction: ltr;
+}
+[data-cgtc-toolbar] button {
+  all: initial;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 5px 10px;
+  border: 1px solid var(--cgtc-border);
+  border-radius: 8px;
+  color: var(--cgtc-fg);
+  background: var(--cgtc-bg);
+  font: 500 12px/20px -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 120ms, border-color 120ms;
+}
+[data-cgtc-toolbar] button:hover { background: var(--cgtc-hover); }
+[data-cgtc-toolbar] button:focus-visible { outline: 2px solid #10a37f; outline-offset: 3px; }
+[data-cgtc-toolbar] button[data-state="success"] { color: var(--cgtc-success); }
+[data-cgtc-toolbar] button[data-state="error"] { color: var(--cgtc-error); }
+[data-cgtc-toolbar] button[data-state="busy"] { cursor: progress; }
+[data-cgtc-toolbar] button svg { display: block; flex-shrink: 0; }
+[data-cgtc-toolbar] .cgtc-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+html.dark [data-cgtc-toolbar], [data-theme="dark"] [data-cgtc-toolbar] {
+  --cgtc-fg: #dedede;
+  --cgtc-bg: #2b2b2b;
+  --cgtc-hover: #383838;
+  --cgtc-border: #4c4c4c;
+  --cgtc-success: #75dbb2;
+  --cgtc-error: #ffb4a9;
+}
+@media (prefers-color-scheme: dark) {
+  html:not(.light):not([data-theme="light"]) [data-cgtc-toolbar] {
+    --cgtc-fg: #dedede;
+    --cgtc-bg: #2b2b2b;
+    --cgtc-hover: #383838;
+    --cgtc-border: #4c4c4c;
+    --cgtc-success: #75dbb2;
+    --cgtc-error: #ffb4a9;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-cgtc-toolbar] button { transition: none; }
+}
+@media print { [data-cgtc-toolbar] { display: none !important; } }
