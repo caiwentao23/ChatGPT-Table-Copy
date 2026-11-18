@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { width: 350px; margin: 0; padding: 24px; color: #242b28; background: #fff; font: 13px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+header { display: flex; align-items: center; gap: 12px; padding-bottom: 22px; border-bottom: 1px solid #eceeeb; }
+header img { flex-shrink: 0; }
+h1 { font-size: 15px; font-weight: 650; margin: 0 0 2px; letter-spacing: -.3px; }
+header p { margin: 0; color: #6b746e; font-size: 12px; }
+ol { list-style: none; padding: 0; margin: 24px 0 22px; display: grid; gap: 20px; }
+li { display: flex; align-items: flex-start; gap: 12px; }
+li > span { display: grid; place-items: center; width: 22px; height: 22px; flex-shrink: 0; border: 1px solid #dfe8e2; border-radius: 50%; font-size: 11px; color: #21765a; }
+li > div { font-weight: 600; padding-top: 1px; }
+small { display: block; font-size: 11px; color: #748078; font-weight: 400; margin-top: 3px; }
+.hint { border-left: 2px solid #80bca1; padding-left: 12px; color: #657269; font-size: 12px; margin: 0 0 22px; }
+a { display: flex; justify-content: space-between; align-items: center; padding: 11px 14px; background: #0f6b56; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; }
+a:hover { background: #0c5847; }
+a:focus-visible { outline: 2px solid #0f6b56; outline-offset: 3px; }
+footer { display: flex; justify-content: space-between; margin-top: 18px; color: #8a928c; font-size: 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #212624; color: #edf2ef; }
+  header { border-color: #38413b; }
+  header p, small, .hint { color: #a5b2a9; }
+  li > span { border-color: #41564a; color: #90d2b2; }
+  a { background: #136f58; }
+}

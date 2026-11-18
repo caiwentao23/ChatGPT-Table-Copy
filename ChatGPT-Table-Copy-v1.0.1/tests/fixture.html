@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>扩展测试页面</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#202123;font:16px/1.7 "Segoe UI","Microsoft YaHei",sans-serif}main{max-width:860px;margin:50px auto;padding:24px}h1{font-size:25px}article{margin:28px 0}.markdown{min-width:0}.table-scroll{overflow:auto;width:100%}table{border-collapse:collapse;width:100%}th,td{padding:12px 18px;border-bottom:1px solid #ddd;text-align:left}th{background:#f7f7f8}#wide{min-width:1450px}textarea{width:100%}html.dark body{background:#212121;color:#eee}html.dark th{background:#303030}html.dark th,html.dark td{border-color:#555}#paste-target{min-height:90px;border:1px dashed #aaa;padding:16px;margin-top:20px}
+</style></head><body><main>
+<h1>ChatGPT 表格复制 · 测试会话</h1>
+<article data-message-author-role="user"><p>请用表格比较三个计划。</p><table id="user-table"><tr><td>用户输入中的表格</td></tr></table></article>
+<article data-message-author-role="assistant"><div class="markdown"><p>以下是计划对比，可直接复制到 Word：</p><div class="table-scroll"><table id="basic"><thead><tr><th>方案</th><th>内容</th><th>备注</th></tr></thead><tbody><tr><td><strong>基础版</strong></td><td>第一行<br>第二行</td><td><a href="https://example.com/plan">查看说明</a></td></tr><tr><td><em>专业版</em></td><td><p>项目一</p><p>项目二</p></td><td>¥199 &amp; 税费</td></tr></tbody></table></div><p>表格之后的说明。</p></div></article>
+<article data-message-author-role="assistant"><div class="markdown"><div class="table-scroll"><table id="wide"><tr><th>宽表格</th><th>信息</th><th>数据</th><th>结果</th><th>说明</th><th>更多</th><th>最后一列</th></tr><tr><td>甲</td><td>乙</td><td>丙</td><td>丁</td><td>戊</td><td>己</td><td>庚</td></tr></table></div></div></article>
+<div id="dynamic"></div><p>粘贴验证区域：</p><div id="paste-target" contenteditable="true" aria-label="粘贴验证区域"></div>
+</main></body></html>
